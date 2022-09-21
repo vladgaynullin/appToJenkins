@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    environment {
+        PROJECT_NAME = "IVAN"
+    }
+    stages {
+        stage('My-pipeline1') {
+            steps {
+                echo 'Hello World1'
+            }
+        }
+        stage('My-pipeline2') {
+            steps {
+                echo 'Hello World2'
+            }
+        }
+        stage('My-pipeline3') {
+            steps {
+                echo 'Hello World3'
+                echo "Name is ${PROJECT_NAME}"
+            }
+        }
+    }
+}
+
